@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<xsd:schema xmlns="http://www.cnblogs.com/eric-lin/schema/user"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:beans="http://www.springframework.org/schema/beans"
+            xmlns:tool="http://www.springframework.org/schema/tool"
+            targetNamespace="http://www.cnblogs.com/eric-lin/schema/user"
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <xsd:import namespace="http://www.springframework.org/schema/tool"/>
+
+    <xsd:element name="user">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="name" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>姓名</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+
+                    <xsd:attribute name="sex" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>性别</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+
+                    <xsd:attribute name="age" type="xsd:int">
+                        <xsd:annotation>
+                            <xsd:documentation>年龄</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
