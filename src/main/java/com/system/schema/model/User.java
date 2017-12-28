@@ -1,6 +1,14 @@
 package com.system.schema.model;
 
-public class User {
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class User implements BeanFactoryPostProcessor, DisposableBean, BeanPostProcessor, ApplicationContextAware {
     private String id;
     private String name;
     private String sex;
@@ -36,5 +44,18 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+
+    public void destroy() throws Exception {
+
+    }
+
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+
+    }
+
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+
     }
 }
