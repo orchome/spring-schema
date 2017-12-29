@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:test="http://www.cnblogs.com/eric-lin/schema/user"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:test="http://www.orchome.com/eric-lin/schema/user"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-    http://www.cnblogs.com/eric-lin/schema/user
-    http://www.cnblogs.com/eric-lin/schema/user/user.xsd">
+    http://www.orchome.com/eric-lin/schema/user
+    http://www.orchome.com/eric-lin/schema/user/user.xsd">
 
     <test:user id="eric" name="123" sex="male" age="28" />
     <test:user id="eric2" name="1234" sex="man" age="29" />
-
 </beans>

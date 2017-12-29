@@ -6,5 +6,6 @@ public class UserNamespaceHandler extends NamespaceHandlerSupport {
 
     public void init() {
         registerBeanDefinitionParser("user", new DubboBeanDefinitionParser());
+//        registerBeanDefinitionParser("user", new UserBeanDefinitionParser());
     }
 }
